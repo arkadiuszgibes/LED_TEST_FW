@@ -173,7 +173,8 @@ void initialSequenceTask(void const * argument)
 		   */
 		  // release raibnow thread
 		  osSemaphoreRelease(allowRainbowSemHandle);
-
+		  // terminate task
+		  osThreadTerminate(initialSequenceHandle);
 		  break;
 	  }
 	  seq_cnt++;
